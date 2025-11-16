@@ -136,11 +136,10 @@ nav a:hover {
 
 .card img {
   width: 100%;
-  height: 280px;               /* 썸네일 작게 복구 */
-  object-fit: cover;
-  object-position: top center; /* 얼굴 위주로 조정 */
-  display: block;
-  transition: transform 0.5s ease;
+  height: 280px;
+  object-fit: contain;           /* ← cover → contain */
+  object-position: center;       /* 중앙 정렬 */
+  background: #f0f0f0;           /* 빈 공간 배경 (선택) */
 }
 
 .card:hover img {
