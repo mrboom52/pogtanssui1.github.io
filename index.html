@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>이현빈 | 캐릭터 일러스트 포트폴리오</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header>
+    <div class="container header-inner">
+      <div class="logo">ILLUST.</div>
+      <nav>
+        <ul>
+          <li><a href="#home">홈</a></li>
+          <li><a href="#gallery">작품</a></li>
+          <li><a href="#contact">연락</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 히어로 -->
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>이현빈의 캐릭터 일러스트</h1>
+      <p>포트폴리오</p>
+      <a href="#gallery" class="btn">작품 보기</a>
+    </div>
+  </section>
+
+  <!-- 갤러리 -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="grid">
+        <div class="card" onclick="openModal('images/1.png')">
+          <img src="images/1.png" alt="작품 1">
+        </div>
+        <div class="card" onclick="openModal('images/2.png')">
+          <img src="images/2.png" alt="작품 2">
+        </div>
+        <div class="card" onclick="openModal('images/3.png')">
+          <img src="images/3.png" alt="작품 3">
+        </div>
+        <div class="card" onclick="openModal('images/4.png')">
+          <img src="images/4.png" alt="작품 4">
+        </div>
+        <div class="card" onclick="openModal('images/5.png')">
+          <img src="images/5.png" alt="작품 5">
+        </div>
+        <div class="card" onclick="openModal('images/6.png')">
+          <img src="images/6.png" alt="작품 6">
+        </div>
+        <div class="card" onclick="openModal('images/7.png')">
+          <img src="images/7.png" alt="작품 7">
+        </div>
+        <div class="card" onclick="openModal('images/8.png')">
+          <img src="images/8.png" alt="작품 8">
+        </div>
+        <div class="card" onclick="openModal('images/9.png')">
+          <img src="images/9.png" alt="작품 9">
+        </div>
+        <div class="card" onclick="openModal('images/10.png')">
+          <img src="images/10.png" alt="작품 10">
+        </div>
+        <div class="card" onclick="openModal('images/11.png')">
+          <img src="images/11.png" alt="작품 11">
+        </div>
+        <div class="card" onclick="openModal('images/12.png')">
+          <img src="images/12.png" alt="작품 12">
+        </div>
+        <div class="card" onclick="openModal('images/13.png')">
+          <img src="images/13.png" alt="작품 13">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 모달 -->
+  <div id="modal" class="modal" onclick="closeModal()">
+    <span class="close" onclick="closeModal()">×</span>
+    <img class="modal-content" id="modal-image">
+  </div>
+
+  <!-- 푸터 -->
+  <footer id="contact">
+    <div class="container">
+      <p>© 2025</p>
+      <p>연락처:010-2857-9702 | X(트위터): <a href="https://x.com/pogtanssui1" target="_blank">민트펑크 (@pogtanssui1)</a></p>
+    </div>
+  </footer>
+
+  <!-- 스크립트 -->
+  <script>
+    function openModal(src) {
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modal-image");
+      modal.style.display = "flex";
+      modalImg.src = src;
+      document.body.style.overflow = "hidden";
+    }
+    function closeModal() {
+      const modal = document.getElementById("modal");
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+    document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
+  </script>
+
+</body>
+</html>
